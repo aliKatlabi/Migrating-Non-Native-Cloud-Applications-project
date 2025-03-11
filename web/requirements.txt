@@ -39,3 +39,5 @@ Werkzeug
 wrapt
 azure-servicebus
 python-dotenv
+azure-communication-email
+asyncio
