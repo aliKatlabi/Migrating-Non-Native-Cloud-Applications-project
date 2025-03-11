@@ -14,8 +14,8 @@ class BaseConfig:
     SECRET_KEY = os.getenv('SERVICE_BUS_SECRET_KEY')
     SERVICE_BUS_CONNECTION_STRING = os.getenv('SERVICE_BUS_CONNECTION_STRING')
     SERVICE_BUS_QUEUE_NAME ='notificationqueue'
-    ADMIN_EMAIL_ADDRESS: 'info@techconf.com'
-    SENDGRID_API_KEY = '' #Configuration not required, required SendGrid Account
+    ADMIN_EMAIL_ADDRESS= 'DoNotReply@fb18c380-73c3-4bf0-87bd-be0530297617.azurecomm.net'
+    SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY') #Configuration not required, required SendGrid Account
 
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
