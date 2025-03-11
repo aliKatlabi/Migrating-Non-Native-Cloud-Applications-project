@@ -1,0 +1,10 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/528b9f87-1fc5-4c45-adc3-14a303f612d0/resourceGroups/cloud-demo-2/providers/Microsoft.Web/sites/projectapp",
+    "appService.deploySubpath": "web",
+    "azureFunctions.deploySubpath": "function",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen"
+}
