@@ -63,9 +63,18 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
-
+| *Azure Postgres Database* |   Standard_B1ms (1 vCore)  |       12.84   EUR     |
+| *Azure Service Bus*   |      Basic   |   <0.05  EUR        | 
+| *Web App*                  |      Basic B1   |        8.76 EUR      |
+| *Function App*                   |     Dynamic    |              |
+| *Storage account*                  |    Standard     |          20 EUR    |
+|*Azure Communication Services*                   |    Dynamic     |         0.00025 EUR/Email   |
+|*Total*                   |         |      ~ 40 EUR      | 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+
+- **Azure App Service** handles the main web application, providing a reliable and scalable platform for hosting your web app.
+- **Azure Functions** allows you to offload background processing tasks and handle event-driven scenarios without managing servers.
+- **Azure Service Bus** ensures reliable and decoupled communication between different components of the application, improving scalability and resilience.
+- **Azure Communication Services** adds rich communication features to your application, enhancing user interaction and engagement.
+
+This combination of services leverages the strengths of each component, resulting in a well-architected solution that can handle a wide range of scenarios and workloads.
