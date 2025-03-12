@@ -3,7 +3,6 @@ from datetime import datetime
 from app.models import Attendee, Conference, Notification
 from flask import render_template, session, request, redirect, url_for, flash, make_response, session
 import logging
-from azure.communication.email import EmailClient
 import asyncio
 from azure.servicebus.aio import ServiceBusClient
 from azure.servicebus import ServiceBusMessage

@@ -11,7 +11,6 @@ class BaseConfig:
     DB_URL = 'postgresql://{user}:{pw}@{url}/{db}'.format(user=POSTGRES_USER,pw=POSTGRES_PW,url=POSTGRES_URL,db=POSTGRES_DB)
     SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI') or DB_URL
     CONFERENCE_ID = 1
-    SECRET_KEY = os.getenv('SERVICE_BUS_SECRET_KEY')
     SERVICE_BUS_CONNECTION_STRING = os.getenv('SERVICE_BUS_CONNECTION_STRING')
     SERVICE_BUS_QUEUE_NAME ='notificationqueue'
     ADMIN_EMAIL_ADDRESS= 'DoNotReply@fb18c380-73c3-4bf0-87bd-be0530297617.azurecomm.net'
