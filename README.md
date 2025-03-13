@@ -61,15 +61,20 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource | Service Tier | Monthly Cost |
-| ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |   Standard_B1ms (1 vCore)  |       12.84   EUR     |
-| *Azure Service Bus*   |      Basic   |   <0.05  EUR        | 
-| *Web App*                  |      Basic B1   |        8.76 EUR      |
-| *Function App*                   |     Dynamic    |              |
-| *Storage account*                  |    Standard     |          20 EUR    |
-|*Azure Communication Services*                   |    Dynamic     |         0.00025 EUR/Email   |
-|*Total*                   |         |      ~ 40 EUR      | 
+| Service Category | Service Type | Region | Description | Estimated Monthly Cost |
+| ---------------- | ------------ | ------ | ----------- | ---------------------- |
+| Web              | Azure Communication Services | West Europe | Email: 100000 Email sent per month | $25.00 |
+| Storage          | Storage Accounts | West Europe | Premium Block Blob Storage, Flat Namespace, ZRS Redundancy, Hot Access Tier, 1,000 GB Capacity - Pay as you go, 10 x 10,000 Write operations, 10 x 10,000 List and Create Container Operations, 10 x 10,000 Read operations, 1 x 10,000 Other operations. 1,000 GB Data Retrieval, 1,000 GB Data Write, SFTP disabled | $260.19 |
+| Compute          | App Service | West Europe | Premium V2 Tier; 1 P3V2 (4 Core(s), 14 GB RAM, 250 GB Storage) x 730 Hours; Linux OS; 0 SNI SSL Connections; 0 IP SSL Connections; 0 Custom Domains; 0 Standard SLL Certificates; 0 Wildcard SSL Certificates | $337.26 |
+| Compute          | Azure Functions | West Europe | Premium tier, Pay as you go, EP2: 2 Cores(s), 7 GB RAM, 250 GB Storage, 1 Pre-warmed instances, 1 Additional scaled out units | $617.14 |
+| Databases        | Azure Database for PostgreSQL | West Europe | Flexible Server Deployment, General Purpose Tier, 1 D2ds v5 (2 vCores) x 730 Hours (Pay as you go), Storage - Premium SSD, 5 GiB Storage, 0 Provisioned IOPS, 0 GiB Additional Backup storage - LRS redundancy, without High Availability | $155.44 |
+| Integration      | Service Bus | West Europe | Premium tier: 1 daily message units x 1 partition(s) x 730 Hours | $677.08 |
+| Support          | Support | - | - | $0.00 |
+| **Total**        | - | - | - | **$2,072.11** |
+
+
+you can find the estimation link here : [Estimated monthly cost](https://azure.com/e/5166714d869e4be68ff3ff00c8c01210)
+
 ## Architecture Explanation
 
 - **Azure App Service** handles the main web application, providing a reliable and scalable platform for hosting your web app.
